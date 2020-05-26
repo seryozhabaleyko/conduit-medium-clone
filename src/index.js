@@ -1,25 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
-import Routes from "routes";
+import { Provider } from 'react-redux';
+
+import store from 'store';
+import App from 'components/App';
+
+/* import Routes from "routes";
 import TopBar from "components/topBar";
 import { CurrentUserProvider } from "contexts/currentUser";
 import CurrentUserChecker from 'components/currentUserChecker';
 
 const App = () => (
-  <CurrentUserProvider>
-    <CurrentUserChecker>
-      <Router>
-        <TopBar />
-        <Routes />
-      </Router>
-    </CurrentUserChecker>
-  </CurrentUserProvider>
-);
+    <CurrentUserProvider>
+        <CurrentUserChecker>
+
+            <TopBar />
+            <Routes />
+        </CurrentUserChecker>
+    </CurrentUserProvider>
+); */
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
