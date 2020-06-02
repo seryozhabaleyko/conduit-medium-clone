@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 
 import store from 'store';
 import App from 'components/App';
+import ErrorBoundary from 'components/ErrorBoundary';
 
 /* import Routes from "routes";
 import TopBar from "components/topBar";
@@ -23,7 +24,9 @@ const App = () => (
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>
-            <App />
+            <ErrorBoundary>
+                <App />
+            </ErrorBoundary>
         </Provider>
     </React.StrictMode>,
     document.getElementById('root')
