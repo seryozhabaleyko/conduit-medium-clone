@@ -6,6 +6,8 @@ import store from 'store';
 import App from 'components/App';
 import ErrorBoundary from 'components/ErrorBoundary';
 
+import './index.scss';
+
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>
