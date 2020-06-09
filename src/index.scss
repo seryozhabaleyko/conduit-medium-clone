@@ -1,0 +1,38 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(230, 230, 230, 1);
+
+  &-item {
+    margin-bottom: -0.7px;
+  }
+
+  &-link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 50px;
+
+    padding-bottom: 14px;
+    margin-right: 20px;
+
+    color: rgba(117, 117, 117, 1);
+
+    &:hover {
+      color: rgba(41, 41, 41, 1);
+    }
+
+    &.active {
+      cursor: default;
+      color: rgba(41, 41, 41, 1);
+      border-bottom: 1px solid rgba(117, 117, 117, 1);
+      color: #5cb85c;
+      border-bottom: 2px solid #5cb85c;
+    }
+  }
+}
