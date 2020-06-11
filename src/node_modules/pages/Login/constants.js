@@ -1,0 +1,1 @@
+export const defaultErrorMessage = 'Сервер временно недоступен';
